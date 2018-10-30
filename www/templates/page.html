@@ -1,0 +1,38 @@
+<ion-view title="Page" id="page1">
+  <ion-content padding="true" class="has-header">
+    <h1 id="page-heading1" style="color:#000000;">Lab 2</h1>
+    <div id="page-markdown1" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">Text input 1:</p>
+    </div>
+    <form id="page-form5" class="list">
+      <label class="item item-input" id="page-input7">
+        <span class="input-label">Input</span>
+        <input type="text" placeholder="" ng-model="mdl.intxt1">
+      </label>
+    </form>
+    <div id="page-markdown2" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">Cool radio button family</p>
+    </div>
+    <form id="page-form6" class="list">
+      <ion-radio id="page-radio5" ng-model="mdl.radio5" value = '1'>Radio</ion-radio>
+      <ion-radio id="page-radio6" ng-model="mdl.radio5" value = '2' >Radio</ion-radio>
+    </form>
+    <div id="page-markdown5" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">Seamless slider</p>
+    </div>
+    <form id="page-form8" class="list">
+      <ion-item class="range range-positive" id="page-range3">Range
+        <input type="range" value="50" min="0" max="100" step="1" ng-model="mdl.range1">
+      </ion-item>
+    </form>
+
+    <button id="page-button1" class="button button-positive button-block" ng-click="resetButton()">Reset</button>
+
+    <button id="page-button2" class="button button-positive button-block" ui-sref="page2({intxt1:mdl.intxt1,range1:mdl.range1,radio5:mdl.radio5})">Tap me!</button>
+
+    <p> Here are your inputs: </p>
+    <p> The value of the input text: {{mdl.intxt1}} </p>
+    <p> The value of the radio: {{mdl.radio5}} </p>
+    <p> The value of the range: {{mdl.range1}} </p>
+  </ion-content>
+</ion-view>
